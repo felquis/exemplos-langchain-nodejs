@@ -2,7 +2,7 @@ import { DynamicStructuredTool } from "@langchain/core/tools";
 import { z } from "zod";
 
 // Mock database of galactic and historical events (Time-Travel Log)
-const events = [
+export const events = [
   // Past Events
   { id: 1, name: "Lançamento do Sputnik 1", date: "1957-10-04T19:28:00Z", location: "Baikonur, Terra", topic: "Início da Era Espacial", description: "O primeiro satélite artificial da humanidade é lançado, marcando o início da corrida espacial." },
   { id: 2, name: "Primeiro Homem na Lua", date: "1969-07-20T20:17:00Z", location: "Mar da Tranquilidade, Lua", topic: "Conquista Lunar", description: "A Apollo 11 pousa e Neil Armstrong se torna o primeiro humano a caminhar na superfície lunar." },

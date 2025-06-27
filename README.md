@@ -99,6 +99,93 @@ Aqui estão alguns eventos marcantes do passado:
 Se desejar mais detalhes sobre algum desses eventos, é só me avisar! 😊
 ```
 
+### `examples/02-interactive-agent.js`
+
+Usa um histórico de chat e consegue se "lembrar" de informações de chats passados.
+
+**Examplo de Saída no Terminal:**
+
+```
+Você: meu nome é Ofelquis
+
+Guia: Olá, Ofelquis! É um prazer ter você aqui para explorar eventos fascinantes do passado e do futuro no espaço. Como posso te ajudar hoje? Se tiver alguma preferência por local, tema ou período de tempo, é só me dizer!
+
+Você: Qual é meu nome?
+
+Guia: Seu nome é Ofelquis! Como posso te ajudar a explorar eventos no espaço hoje? Se tiver alguma preferência por local, tema ou período de tempo, é só me dizer!
+
+Você:
+```
+
+### `example/03-interactive-agent-feedback`
+
+Usa o AgentOperator callbacks para mostrar eventos de "reasoning" demonstrando o que o agente está executando em tempo real.
+
+**Examplo de Saída no Terminal:**
+
+```
+↪ Usando a ferramenta ...
+✔ Ferramenta X finalizada
+🧠 Consultando a consciência galáctica...
+```
+
+
+### `exemplo/04-interactive-agent-time-state`
+
+Gerencia um pedaço de estado global da data, quando usuário pede para viajar no tempo ele atualiza este estado e isso reflete em como o agente responde os próximos prompts.
+
+**Examplo de Saída no Terminal:**
+
+```
+[🏠Presente] Você: quis dizer, mar
+↪ Usando a ferramenta: list_galactic_events...
+Guia: Atualmente, temos eventos relacionados a Marte:
+
+1. **Pouso do Rover Curiosity em Marte**
+   - Data: 06 de agosto de 2012
+   - Local: Cratera Gale, Marte
+   - Tópico: Exploração de Marte
+
+2. **Inauguração da Primeira Colônia em Marte**
+   - Data: 15 de março de 2077
+   - Local: Nova Olympus, Marte
+   - Tópico: Colonização Planetária
+
+Se você deseja saber mais detalhes sobre algum desses eventos ou escolher um para visitar, me avise!
+
+[🏠Presente] Você: ha, pode ser a primeira colonia
+↪ Usando a ferramenta: viajar_no_tempo_para_evento...
+Guia: Bem-vindo à Nova Olympus em Marte! Aqui está um pouco mais sobre a inauguração da primeira colônia em Marte:
+
+A colonização de Marte representa um marco significativo na história da humanidade, expandindo nossas fronteiras para além da Terra. A Nova Olympus é a primeira colônia estabelecida em Marte, proporcionando um ambiente habitável e sustentável para os colonos viverem e prosperarem no Planeta Vermelho.
+
+Os colonos que se estabeleceram aqui enfrentaram desafios únicos, mas também descobriram novas possibilidades e oportunidades, contribuindo para o avanço da ciência, tecnologia e exploração espacial.
+
+Se desejar explorar mais a colônia ou saber detalhes específicos sobre esta inauguração, fique à vontade para me perguntar!
+
+[📍Inauguração da Primeira Colônia em Marte] Você: incrível!
+O Guia está pensando... -
+Guia: Fico feliz que tenha achado incrível a inauguração da primeira colônia em Marte! A colonização de planetas além da Terra é realmente fascinante e representa um grande salto para a humanidade.
+
+Se tiver mais alguma curiosidade ou quiser saber sobre outros eventos históricos, é só me avisar. Estou aqui para ajudar na sua jornada pelo tempo!
+
+[📍Inauguração da Primeira Colônia em Marte] Você: sair
+```
+
+#### `exemplo/05-interactive-agent-tool-parameters`
+
+Ao chamar uma função, ele da um log mais curto de quais parametros foi usado
+
+**Examplo de Saída no Terminal:**
+
+```
+[🏠Presente] Você: prefiro inauguracao
+↪ Usando a ferramenta: list_galactic_events... argumentos: {
+  "location": "Marte",
+  "topic": "Colonização Planetária"
+}
+```
+
 ## Contribuições
 
 Contribuições são bem-vindas! Se você tiver ideias para novos exemplos ou melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request. 
