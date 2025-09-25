@@ -4,13 +4,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:voice": "node examples/06-voice-chat-server.js"
   },
   "dependencies": {
     "@langchain/core": "0.3.58",
     "@langchain/openai": "0.5.16",
-    "langchain": "0.3.25",
     "dotenv": "16.4.7",
+    "express": "^5.1.0",
+    "langchain": "0.3.25",
+    "openai": "^5.23.0",
     "zod": "^3.23.8"
   },
   "keywords": [],
