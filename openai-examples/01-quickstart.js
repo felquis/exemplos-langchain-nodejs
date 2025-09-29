@@ -4,7 +4,7 @@ const client = new OpenAI();
 
 const response = await client.responses.create({
   model: "gpt-4-turbo",
-  input: "Olá, quem é você? PS: finja ser uma reincanação do Nicola Tesla",
+  input: "Qual a melhor cidade para morar no Brasil?",
 });
 
 console.log(response.output_text);
